@@ -10,7 +10,7 @@ hh -decompile TARGET_FOLDER SOURCE.CHM
 
 3. Find your help file index (.hhc file)
 
-4. Launch webchm_view.html?index={name of your index file}.hhc and enjoy
+4. Launch `webchm_view.html?index={name of your index file}.hhc` via browser
 
 5. If you want, you may do minor changes in `webchm_view.html` so:
     * Create `webchm_view_user.css` to future alter visual styles (uncomment loading in head)
