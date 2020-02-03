@@ -14,5 +14,5 @@ hh -decompile TARGET_FOLDER SOURCE.CHM
 
 5. If you want, you may do minor changes in `webchm_view.html` so:
     * Create `webchm_view_user.css` to future alter visual styles (uncomment loading in head)
-    * Edit call to `webchmView.boot('index.hhc', true);` to alter default .hhc index name (default 'index.hhc')
-    * Edit call to `webchmView.boot('index.hhc', true);` to disable 'index' param processing (more secure)
+    * Edit call to `webchmView.boot('{your name .hhc}', true);` to alter default .hhc index name (default 'index.hhc')
+    * Edit call to `webchmView.boot('index.hhc', false);` to disable 'index' param processing (more secure)
