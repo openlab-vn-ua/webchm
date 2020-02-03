@@ -1,0 +1,29 @@
+<html>
+<head>
+  <script src="webchm.js"></script>
+  <script src="webchm_view.js"></script>
+  <link rel="stylesheet" type="text/css" href="webchm_view.css">
+
+  <!-- Uncomment this to enable user styles -->
+  <!--
+  <link rel="stylesheet" type="text/css" href="webchm_view_user.css">
+  -->
+</head>
+<body>
+
+  <div class="webchm">
+    <div class="help-tree" id="webchm_help_tree">
+      <div class="tree-load-wait" id="webchm_help_tree_load_sign">&#x231a;</div>
+    </div>
+    <iframe class="help-content" src="" name="help_content" onload="webchmView.procChangeContentDocLocation(this)"></iframe>
+  </div>
+
+  <script>
+  //<![CDATA[
+  // First argument : name of index file (.hhc file)
+  // Second argument: is '?index=' page param name is allowed
+  webchmView.boot('index.hhc', true);
+  //]]>
+  </script>
+
+</body>

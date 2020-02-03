@@ -1,0 +1,84 @@
+.webchm {
+  margin: 0;
+  width: 100%;
+  height: 97vh;
+}
+
+.webchm {
+  font-family: Calibri,Vectora,'Droid Sans','Open Sans',Frutiger,sans-serif;
+}
+
+.webchm .help-tree { 
+  width:30%; float:left; 
+  overflow:scroll; 
+  height:100%; 
+  border: 1px solid gray; 
+}
+
+.webchm .help-content { 
+  margin-left: 0.7%; 
+  width:68%; 
+  height:100%; 
+  border: 1px solid gray;
+}
+
+.webchm .help-tree .tree-load-wait {
+  position:absolute;
+  text-align:center;
+  font-size: 3em;
+  padding-top:45vh;
+  padding-left:12vw;
+}
+
+.webchm .help-tree .tree-load-error {
+  text-align:center;
+  font-size: 1em;
+  color: red;
+}
+
+.webchm .help-tree ul {
+  list-style-type: none;
+}
+
+.webchm .help-tree ul { padding-inline-start: 1em; }
+
+.webchm .help-tree ul a {
+  white-space: nowrap;
+}
+
+.webchm a, .webchm a:visited, .webchm a:hover, .webchm a:active { 
+  color: inherit; 
+  text-decoration: none;
+}
+
+.webchm a:hover { text-decoration: underline; }
+
+.webchm a.active { color: #3300CC; }
+
+
+.webchm .help-tree li.subtree-collapsed > ul {
+  display:none;
+}
+
+.webchm .help-tree ul li > a::before {
+  content: "\25B7";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.webchm .help-tree ul li.has-children.subtree-open > a::before {
+  content: "\229F";
+  font-size:0.7em;
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.webchm .help-tree ul li.has-children.subtree-collapsed > a::before {
+  content: "\229E";
+  font-size:0.7em;
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
