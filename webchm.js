@@ -29,7 +29,7 @@ webchm = new function() {
 
    // make param tags self-closing to produce valid xml
 
-   regex = /(<param .*?\/?)(>)/gmsi; 
+   regex = /(<param\s+[\s\S]*?\/?)(>)/gmi; 
    subst = '$1/>';
    text = text.replace(regex, subst);
 
@@ -48,7 +48,7 @@ webchm = new function() {
      allows[PFX + ALOWED[i]] = true;
    }
 
-   var regex   = /<([a-z_-]+)/gmi;
+   var regex   = /<([0-9a-z_-]+)/gmi;
    var matches = text.matchAll(regex);
 
    for (var i = 0; i < matches.length; i++) {
@@ -74,11 +74,11 @@ webchm = new function() {
 
    // remove text outside of body
 
-   regex = /.*?<BODY.*?>/gmsi;
+   regex = /[\s\S]*?<BODY[\s\S]*?>/gmi;
    var subst = '';
    text = text.replace(regex, subst);
 
-   regex = /(?<=.*)<\/BODY>.*/gmsi;
+   regex = /<\/BODY>[\s\S]*/gmi;
    var subst = '';
    text = text.replace(regex, subst);
 
